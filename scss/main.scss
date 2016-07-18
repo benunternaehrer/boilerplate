@@ -1,0 +1,38 @@
+// SETTINGS
+@import 
+    '01_settings/01_colors',
+    '01_settings/02_variables',
+    '01_settings/03_mixins';
+
+// RESET
+@import 
+    '02_reset/reset_basic',
+    '02_reset/reset_custom',
+    '02_reset/reset_form';
+
+// VENDOR
+@import 
+    '03_vendor/grid/grid-main';
+
+// GLOBAL
+@import
+    '04_global/basics',
+    '04_global/layout',
+    '04_global/print',
+    '04_global/typography';
+
+// COMPONENTS
+@import 
+    '05_components/example';
+
+// UTILITIES -> Classes with just a single purpose
+@import 
+    '06_utilities/utilities';
+
+// OVERWRITES -> Overwritinge default classes
+@import 
+    '07_overwrites/overwrites';
+
+// TEMPORARY -> just for temporary CSS (mainly fixes from developers) -> needs to be reviewed and replaced
+@import
+    'temp';

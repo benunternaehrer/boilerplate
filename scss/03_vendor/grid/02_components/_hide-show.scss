@@ -1,0 +1,76 @@
+// =============================================
+// HIDE / SHOW
+// =============================================
+
+.g-show-xs-only,
+.g-show-sm-up,
+.g-show-sm-only,
+.g-show-sm-down,
+.g-show-md-up,
+.g-show-md-only,
+.g-show-md-down,
+.g-show-lg-up,
+.g-show-lg-only,
+.g-show-lg-down,
+.g-show-xl-only {
+    display: none;
+}
+
+
+// SIZE XS
+
+@include size-xs-only    {
+    .g-show-xs-only  {display: block;}
+    .g-hide-xs-only  {display: none;}
+}
+
+// SIZE SM
+
+@include size-sm-up {
+    .g-show-sm-up  {display: block;}
+    .g-hide-sm-up  {display: none;}
+}
+@include size-sm-only {
+    .g-show-sm-only  {display: block;}
+}
+@include size-sm-down {
+    .g-show-sm-down  {display: block;}
+    .g-hide-sm-down  {display: none;}
+}
+
+// SIZE MD
+
+@include size-md-up {
+    .g-show-md-up  {display: block;}
+    .g-hide-md-up  {display: none;}
+}
+@include size-md-only {
+    .g-show-md-only  {display: block;}
+}
+@include size-md-down {
+    .g-show-md-down  {display: block;}
+    .g-hide-md-down  {display: none;}
+}
+
+
+// SIZE LG
+
+@include size-lg-up {
+    .g-show-lg-up  {display: block;}
+    .g-hide-lg-up  {display: none;}
+}
+@include size-lg-only {
+    .g-show-lg-only  {display: block;}
+}
+@include size-lg-down {
+    .g-show-lg-down  {display: block;}
+    .g-hide-lg-down  {display: none;}
+}
+
+
+// SIZE XL
+
+@include size-xl-only {
+    .g-show-xl-only  {display: block;}
+    .g-hide-xl-only  {display: none;}
+}

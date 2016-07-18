@@ -1,0 +1,82 @@
+// AVIABLE MIXINS
+// @include size-xs-only {}
+// @include size-sm-only {}
+// @include size-sm-up {}
+// @include size-sm-down {}
+// @include size-md-only {}
+// @include size-md-up {}
+// @include size-md-down {}
+// @include size-lg-only {}
+// @include size-lg-up {}
+// @include size-lg-down {}
+// @include size-xl-only {}
+
+
+@mixin size-xs-only {
+    @media only screen and (max-width: $grid-sm - 1px)  {
+        @content;
+    }
+}
+
+@mixin size-sm-up {
+    @media only screen and (min-width: $grid-sm)    {
+        @content;
+    }
+}
+
+@mixin size-sm-only {
+    @media only screen and (min-width: $grid-sm) and (max-width: ($grid-md - 1px) + ($breakpoint-space))    {
+        @content;
+    }
+}
+
+@mixin size-sm-down {
+    @media only screen and (max-width: ($grid-md - 1px) + ($breakpoint-space))  {
+        @content;
+    }
+}
+
+@mixin size-md-up {
+    @media only screen and (min-width: $grid-md + ($breakpoint-space))  {
+        @content;
+    }
+}
+
+@mixin size-md-only {
+    @media only screen and (min-width: $grid-md + $breakpoint-space) and (max-width: ($grid-lg - 1px) + ($breakpoint-space))    {
+        @content;
+    }
+}
+
+@mixin size-md-down {
+    @media only screen and (max-width: ($grid-lg - 1px) + ($breakpoint-space))  {
+        @content;
+    }
+}
+
+@mixin size-lg-up {
+    @media only screen and (min-width: $grid-lg + ($breakpoint-space))  {
+        @content;
+    }
+}
+
+@mixin size-lg-only {
+    @media only screen and (min-width: $grid-lg + $breakpoint-space) and (max-width: ($grid-xl - 1px ) + ($breakpoint-space))   {
+        @content;
+    }
+}
+
+@mixin size-lg-down {
+    @media only screen and (max-width: ($grid-xl - 1px) + ($breakpoint-space))  {
+        @content;
+    }
+}
+
+@mixin size-xl-only {
+    @media only screen and (min-width: $grid-xl + ($breakpoint-space))  {
+        @content;
+    }
+}
+
+
+

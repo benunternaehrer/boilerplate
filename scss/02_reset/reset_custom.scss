@@ -1,0 +1,40 @@
+// =========================================================
+// BROWSER-FIXES
+// =========================================================
+
+// Fixes pseudo-element animation on :hover for Internet Explorer 10 */
+:hover{
+    /* Don't stripe out this empty selector */
+} 
+
+
+// =========================================================
+// DEFAULT BEHAVIOURS
+// =========================================================
+
+
+// Border Box / Inherit fonts
+html, body  {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+    font: inherit;
+}
+
+// Don't outline selectet elements -> Add cusotom focus state
+img, a  {
+    outline: none;
+}
+
+
+// =========================================================
+// Some defaults from Normalize.css
+// =========================================================
+
+// Correct overflow not hidden in IE 9/10/11.
+svg:not(:root) {
+  overflow: hidden;
+}
+
+

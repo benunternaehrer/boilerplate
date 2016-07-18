@@ -1,0 +1,29 @@
+// =========================================================
+// GENEREL PROJECT SETTINGS
+// =========================================================
+
+:root  {
+    background-color: $white
+}
+
+figure  {
+    line-height: 0;
+}
+
+img {
+    max-width: 100%;
+    line-height: 0;
+    vertical-align: middle;
+}
+
+
+// =========================================================
+// NAV-BASIC
+// =========================================================
+    
+nav ul  {
+    list-style-type: none;
+    li  {
+        display: inline-block;
+    }
+}

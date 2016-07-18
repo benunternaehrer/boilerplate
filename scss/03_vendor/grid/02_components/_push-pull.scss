@@ -1,0 +1,250 @@
+// =============================================
+// PUSH RIGHT
+// =============================================
+
+// =============================================
+// PUSH SIZE-XS
+// =============================================
+
+[class*='g-push-xs-0p']    {left: 0;}
+[class*='g-push-xs-1p']    {left: $width-1;}
+[class*='g-push-xs-2p']    {left: $width-2;}
+[class*='g-push-xs-3p']    {left: $width-3;}
+[class*='g-push-xs-4p']    {left: $width-4;}
+[class*='g-push-xs-5p']    {left: $width-5;}
+[class*='g-push-xs-6p']    {left: $width-6;}
+[class*='g-push-xs-7p']    {left: $width-7;}
+[class*='g-push-xs-8p']    {left: $width-8;}
+[class*='g-push-xs-9p']    {left: $width-9;}
+[class*='g-push-xs-10p']    {left: $width-10;}
+[class*='g-push-xs-11p']    {left: $width-11;}
+[class*='g-push-xs-12p']    {left: $width-12;}
+[class*='g-push-xs-20p']    {left: $width-20;}
+[class*='g-push-xs-40p']    {left: $width-40;}
+[class*='g-push-xs-60p']    {left: $width-60;}
+[class*='g-push-xs-80p']    {left: $width-80;}
+
+
+// =============================================
+// PUSH SIZE-SM
+// =============================================
+
+@include size-sm-up   {
+    [class*='g-push-sm-0p']    {left: 0;}
+    [class*='g-push-sm-1p']    {left: $width-1;}
+    [class*='g-push-sm-2p']    {left: $width-2;}
+    [class*='g-push-sm-3p']    {left: $width-3;}
+    [class*='g-push-sm-4p']    {left: $width-4;}
+    [class*='g-push-sm-5p']    {left: $width-5;}
+    [class*='g-push-sm-6p']    {left: $width-6;}
+    [class*='g-push-sm-7p']    {left: $width-7;}
+    [class*='g-push-sm-8p']    {left: $width-8;}
+    [class*='g-push-sm-9p']    {left: $width-9;}
+    [class*='g-push-sm-10p']    {left: $width-10;}
+    [class*='g-push-sm-11p']    {left: $width-11;}
+    [class*='g-push-sm-12p']    {left: $width-12;}
+    [class*='g-push-sm-20p']    {left: $width-20;}
+    [class*='g-push-sm-40p']    {left: $width-40;}
+    [class*='g-push-sm-60p']    {left: $width-60;}
+    [class*='g-push-sm-80p']    {left: $width-80;}
+}
+
+
+// =============================================
+// PUSH SIZE-MD
+// =============================================
+
+@include size-md-up   {
+    [class*='g-push-md-0p']    {left: 0;}
+    [class*='g-push-md-1p']    {left: $width-1;}
+    [class*='g-push-md-2p']    {left: $width-2;}
+    [class*='g-push-md-3p']    {left: $width-3;}
+    [class*='g-push-md-4p']    {left: $width-4;}
+    [class*='g-push-md-5p']    {left: $width-5;}
+    [class*='g-push-md-6p']    {left: $width-6;}
+    [class*='g-push-md-7p']    {left: $width-7;}
+    [class*='g-push-md-8p']    {left: $width-8;}
+    [class*='g-push-md-9p']    {left: $width-9;}
+    [class*='g-push-md-10p']    {left: $width-10;}
+    [class*='g-push-md-11p']    {left: $width-11;}
+    [class*='g-push-md-12p']    {left: $width-12;}
+    [class*='g-push-md-20p']    {left: $width-20;}
+    [class*='g-push-md-40p']    {left: $width-40;}
+    [class*='g-push-md-60p']    {left: $width-60;}
+    [class*='g-push-md-80p']    {left: $width-80;}
+}
+
+
+// =============================================
+// PUSH SIZE-LG
+// =============================================
+
+@include size-lg-up   {
+    [class*='g-push-lg-0p']    {left: 0;}
+    [class*='g-push-lg-1p']    {left: $width-1;}
+    [class*='g-push-lg-2p']    {left: $width-2;}
+    [class*='g-push-lg-3p']    {left: $width-3;}
+    [class*='g-push-lg-4p']    {left: $width-4;}
+    [class*='g-push-lg-5p']    {left: $width-5;}
+    [class*='g-push-lg-6p']    {left: $width-6;}
+    [class*='g-push-lg-7p']    {left: $width-7;}
+    [class*='g-push-lg-8p']    {left: $width-8;}
+    [class*='g-push-lg-9p']    {left: $width-9;}
+    [class*='g-push-lg-10p']    {left: $width-10;}
+    [class*='g-push-lg-11p']    {left: $width-11;}
+    [class*='g-push-lg-12p']    {left: $width-12;}
+    [class*='g-push-lg-20p']    {left: $width-20;}
+    [class*='g-push-lg-40p']    {left: $width-40;}
+    [class*='g-push-lg-60p']    {left: $width-60;}
+    [class*='g-push-lg-80p']    {left: $width-80;}
+}
+
+
+// =============================================
+// PUSH SIZE-XL
+// =============================================
+
+@include size-xl-only   {
+    [class*='g-push-xl-0p']    {left: 0;}
+    [class*='g-push-xl-1p']    {left: $width-1;}
+    [class*='g-push-xl-2p']    {left: $width-2;}
+    [class*='g-push-xl-3p']    {left: $width-3;}
+    [class*='g-push-xl-4p']    {left: $width-4;}
+    [class*='g-push-xl-5p']    {left: $width-5;}
+    [class*='g-push-xl-6p']    {left: $width-6;}
+    [class*='g-push-xl-7p']    {left: $width-7;}
+    [class*='g-push-xl-8p']    {left: $width-8;}
+    [class*='g-push-xl-9p']    {left: $width-9;}
+    [class*='g-push-xl-10p']    {left: $width-10;}
+    [class*='g-push-xl-11p']    {left: $width-11;}
+    [class*='g-push-xl-12p']    {left: $width-12;}
+    [class*='g-push-xl-20p']    {left: $width-20;}
+    [class*='g-push-xl-40p']    {left: $width-40;}
+    [class*='g-push-xl-60p']    {left: $width-60;}
+    [class*='g-push-xl-80p']    {left: $width-80;}
+}
+
+
+// =============================================
+// PULL SIZE-XS
+// =============================================
+
+[class*='g-pull-xs-0p']    {left: 0;}
+[class*='g-pull-xs-1p']    {left: -$width-1;}
+[class*='g-pull-xs-2p']    {left: -$width-2;}
+[class*='g-pull-xs-3p']    {left: -$width-3;}
+[class*='g-pull-xs-4p']    {left: -$width-4;}
+[class*='g-pull-xs-5p']    {left: -$width-5;}
+[class*='g-pull-xs-6p']    {left: -$width-6;}
+[class*='g-pull-xs-7p']    {left: -$width-7;}
+[class*='g-pull-xs-8p']    {left: -$width-8;}
+[class*='g-pull-xs-9p']    {left: -$width-9;}
+[class*='g-pull-xs-10p']    {left: -$width-10;}
+[class*='g-pull-xs-11p']    {left: -$width-11;}
+[class*='g-pull-xs-12p']    {left: -$width-12;}
+[class*='g-pull-xs-20p']    {left: -$width-20;}
+[class*='g-pull-xs-40p']    {left: -$width-40;}
+[class*='g-pull-xs-60p']    {left: -$width-60;}
+[class*='g-pull-xs-80p']    {left: -$width-80;}
+
+
+// =============================================
+// PULL SIZE-SM
+// =============================================
+
+@include size-sm-up   {
+    [class*='g-pull-sm-0p']    {left: 0;}
+    [class*='g-pull-sm-1p']    {left: -$width-1;}
+    [class*='g-pull-sm-2p']    {left: -$width-2;}
+    [class*='g-pull-sm-3p']    {left: -$width-3;}
+    [class*='g-pull-sm-4p']    {left: -$width-4;}
+    [class*='g-pull-sm-5p']    {left: -$width-5;}
+    [class*='g-pull-sm-6p']    {left: -$width-6;}
+    [class*='g-pull-sm-7p']    {left: -$width-7;}
+    [class*='g-pull-sm-8p']    {left: -$width-8;}
+    [class*='g-pull-sm-9p']    {left: -$width-9;}
+    [class*='g-pull-sm-10p']    {left: -$width-10;}
+    [class*='g-pull-sm-11p']    {left: -$width-11;}
+    [class*='g-pull-sm-12p']    {left: -$width-12;}
+    [class*='g-pull-sm-20p']    {left: -$width-20;}
+    [class*='g-pull-sm-40p']    {left: -$width-40;}
+    [class*='g-pull-sm-60p']    {left: -$width-60;}
+    [class*='g-pull-sm-80p']    {left: -$width-80;}
+}
+
+
+// =============================================
+// PULL SIZE-MD
+// =============================================
+
+@include size-md-up   {
+    [class*='g-pull-md-0p']    {left: 0;}
+    [class*='g-pull-md-1p']    {left: -$width-1;}
+    [class*='g-pull-md-2p']    {left: -$width-2;}
+    [class*='g-pull-md-3p']    {left: -$width-3;}
+    [class*='g-pull-md-4p']    {left: -$width-4;}
+    [class*='g-pull-md-5p']    {left: -$width-5;}
+    [class*='g-pull-md-6p']    {left: -$width-6;}
+    [class*='g-pull-md-7p']    {left: -$width-7;}
+    [class*='g-pull-md-8p']    {left: -$width-8;}
+    [class*='g-pull-md-9p']    {left: -$width-9;}
+    [class*='g-pull-md-10p']    {left: -$width-10;}
+    [class*='g-pull-md-11p']    {left: -$width-11;}
+    [class*='g-pull-md-12p']    {left: -$width-12;}
+    [class*='g-pull-md-20p']    {left: -$width-20;}
+    [class*='g-pull-md-40p']    {left: -$width-40;}
+    [class*='g-pull-md-60p']    {left: -$width-60;}
+    [class*='g-pull-md-80p']    {left: -$width-80;}
+}
+
+
+// =============================================
+// PULL SIZE-LG
+// =============================================
+
+@include size-lg-up   {
+    [class*='g-pull-lg-0p']    {left: 0;}
+    [class*='g-pull-lg-1p']    {left: -$width-1;}
+    [class*='g-pull-lg-2p']    {left: -$width-2;}
+    [class*='g-pull-lg-3p']    {left: -$width-3;}
+    [class*='g-pull-lg-4p']    {left: -$width-4;}
+    [class*='g-pull-lg-5p']    {left: -$width-5;}
+    [class*='g-pull-lg-6p']    {left: -$width-6;}
+    [class*='g-pull-lg-7p']    {left: -$width-7;}
+    [class*='g-pull-lg-8p']    {left: -$width-8;}
+    [class*='g-pull-lg-9p']    {left: -$width-9;}
+    [class*='g-pull-lg-10p']    {left: -$width-10;}
+    [class*='g-pull-lg-11p']    {left: -$width-11;}
+    [class*='g-pull-lg-12p']    {left: -$width-12;}
+    [class*='g-pull-lg-20p']    {left: -$width-20;}
+    [class*='g-pull-lg-40p']    {left: -$width-40;}
+    [class*='g-pull-lg-60p']    {left: -$width-60;}
+    [class*='g-pull-lg-80p']    {left: -$width-80;}
+}
+
+
+// =============================================
+// PULL SIZE-XL
+// =============================================
+
+@include size-xl-only   {
+    [class*='g-pull-xl-0p']    {left: 0;}
+    [class*='g-pull-xl-1p']    {left: -$width-1;}
+    [class*='g-pull-xl-2p']    {left: -$width-2;}
+    [class*='g-pull-xl-3p']    {left: -$width-3;}
+    [class*='g-pull-xl-4p']    {left: -$width-4;}
+    [class*='g-pull-xl-5p']    {left: -$width-5;}
+    [class*='g-pull-xl-6p']    {left: -$width-6;}
+    [class*='g-pull-xl-7p']    {left: -$width-7;}
+    [class*='g-pull-xl-8p']    {left: -$width-8;}
+    [class*='g-pull-xl-9p']    {left: -$width-9;}
+    [class*='g-pull-xl-10p']    {left: -$width-10;}
+    [class*='g-pull-xl-11p']    {left: -$width-11;}
+    [class*='g-pull-xl-12p']    {left: -$width-12;}
+    [class*='g-pull-xl-20p']    {left: -$width-20;}
+    [class*='g-pull-xl-40p']    {left: -$width-40;}
+    [class*='g-pull-xl-60p']    {left: -$width-60;}
+    [class*='g-pull-xl-80p']    {left: -$width-80;}
+}
+
+

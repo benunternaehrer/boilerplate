@@ -1,0 +1,48 @@
+// =========================================================
+// FIXING FLOATING ISSUE, SEE http://www.bluthemes.com/blog/3/clearing-bootstrap-3-columns 
+// =========================================================
+
+@include size-xs-only {
+    [class*='g-clear'][class*='-xs12'] [class*='g-col-']:nth-child(12n+13) {clear: left;}
+    [class*='g-clear'][class*='-xs6'] [class*='g-col-']:nth-child(6n+7) {clear: left;}
+    [class*='g-clear'][class*='-xs5'] [class*='g-col-']:nth-child(5n+6) {clear: left;}
+    [class*='g-clear'][class*='-xs4'] [class*='g-col-']:nth-child(4n+5) {clear: left;}
+    [class*='g-clear'][class*='-xs3'] [class*='g-col-']:nth-child(3n+4) {clear: left;}
+    [class*='g-clear'][class*='-xs2'] [class*='g-col-']:nth-child(2n+3) {clear: left;}
+}
+
+@include size-sm-only {
+    [class*='g-clear'][class*='-sm12'] [class*='g-col-']:nth-child(12n+13) {clear: left;}
+    [class*='g-clear'][class*='-sm6'] [class*='g-col-']:nth-child(6n+7) {clear: left;}
+    [class*='g-clear'][class*='-sm5'] [class*='g-col-']:nth-child(5n+6) {clear: left;}
+    [class*='g-clear'][class*='-sm4'] [class*='g-col-']:nth-child(4n+5) {clear: left;}
+    [class*='g-clear'][class*='-sm3'] [class*='g-col-']:nth-child(3n+4) {clear: left;}
+    [class*='g-clear'][class*='-sm2'] [class*='g-col-']:nth-child(2n+3) {clear: left;}
+}
+
+@include size-md-only {
+    [class*='g-clear'][class*='-md12'] [class*='g-col-']:nth-child(12n+13) {clear: left;}
+    [class*='g-clear'][class*='-md6'] [class*='g-col-']:nth-child(6n+7) {clear: left;}
+    [class*='g-clear'][class*='-md5'] [class*='g-col-']:nth-child(5n+6) {clear: left;}
+    [class*='g-clear'][class*='-md4'] [class*='g-col-']:nth-child(4n+5) {clear: left;}
+    [class*='g-clear'][class*='-md3'] [class*='g-col-']:nth-child(3n+4) {clear: left;}
+    [class*='g-clear'][class*='-md2'] [class*='g-col-']:nth-child(2n+3) {clear: left;}
+}
+
+@include size-lg-only {
+    [class*='g-clear'][class*='-lg12'] [class*='g-col-']:nth-child(12n+13) {clear: left;}
+    [class*='g-clear'][class*='-lg6'] [class*='g-col-']:nth-child(6n+7) {clear: left;}
+    [class*='g-clear'][class*='-lg5'] [class*='g-col-']:nth-child(5n+6) {clear: left;}
+    [class*='g-clear'][class*='-lg4'] [class*='g-col-']:nth-child(4n+5) {clear: left;}
+    [class*='g-clear'][class*='-lg3'] [class*='g-col-']:nth-child(3n+4) {clear: left;}
+    [class*='g-clear'][class*='-lg2'] [class*='g-col-']:nth-child(2n+3) {clear: left;}
+}
+
+@include size-xl-only {
+    [class*='g-clear'][class*='-xl12'] [class*='g-col-']:nth-child(12n+13) {clear: left;}
+    [class*='g-clear'][class*='-xl6'] [class*='g-col-']:nth-child(6n+7) {clear: left;}
+    [class*='g-clear'][class*='-xl5'] [class*='g-col-']:nth-child(5n+6) {clear: left;}
+    [class*='g-clear'][class*='-xl4'] [class*='g-col-']:nth-child(4n+5) {clear: left;}
+    [class*='g-clear'][class*='-xl3'] [class*='g-col-']:nth-child(3n+4) {clear: left;}
+    [class*='g-clear'][class*='-xl2'] [class*='g-col-']:nth-child(2n+3) {clear: left;}
+}

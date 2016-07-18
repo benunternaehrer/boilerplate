@@ -1,0 +1,195 @@
+// =========================================================
+// ARCMEDIA FORM REST
+// =========================================================
+// – All fonts are inherited
+// – Everything else is reseted, except some special inputs like month oder date
+
+// =========================================================
+// Bascis
+// =========================================================
+
+input,
+label,
+select,
+button,
+textarea    {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: inherit;
+    border-radius: 0;
+    background: none;
+    -webkit-appearance: none;
+    -webkit-text-fill-color: inherit;
+    opacity: inherit;
+
+    // Font Reset
+    line-height: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+
+    &:disabled  {
+        color: inherit;
+    }
+
+}
+
+// Remove the stupid outer glow in Webkit
+input:focus, button:focus   {
+    outline: 0;
+}
+
+// These elements are usually rendered a certain way by the browser
+button,
+input[type=reset],
+input[type=button],
+input[type=submit],
+input[type=checkbox],
+input[type=radio],
+select  {
+}
+
+// =========================================================
+// Text Inputs
+// =========================================================
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=range],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week]
+{
+}
+// =========================================================
+// Check- & Radioboxes
+// =========================================================
+
+input[type=checkbox],
+input[type=radio]   {
+    width: 13px;
+    height: 13px;
+}
+
+// =========================================================
+// File Uploads
+// =========================================================
+
+input[type=file]    {
+}
+// Remove default focus on file upload button
+::-webkit-file-upload-button:focus    {
+    outline: none;
+}
+
+// =========================================================
+// Search Input
+// =========================================================
+
+// Make webkit render the search input like a normal text field
+input[type=search]  {
+    -webkit-appearance: none;
+    -webkit-box-sizing: border-box;
+}
+// Turn off the recent search for webkit. It adds about 15px padding on the left
+::-webkit-search-decoration {
+    display: none;
+}
+
+// Remove cancel icon on search button
+::-webkit-search-cancel-button  {
+    display: none;
+}
+
+// =========================================================
+// Buttons
+// =========================================================
+
+button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"]    {
+    // Fix IE7 display bug
+    overflow:visible;
+    cursor: pointer;
+}
+// IE8 and FF freak out if this rule is within another selector
+::-webkit-file-upload-button    { 
+    padding: 0;
+    border: 0;
+    background: none;
+}
+
+// =========================================================
+// Textarea
+// =========================================================
+
+textarea {
+    // Move the label to the top
+    vertical-align: top;
+    // Turn off scroll bars in IE unless needed
+    overflow:auto;
+}
+// =========================================================
+// Selects
+// =========================================================
+
+select  {
+}
+select[multiple]    {
+    // Move the label to the top 
+    vertical-align:top;
+}
+
+// =========================================================
+// Other Browser fixes
+// =========================================================
+
+// FIREFOX
+// Remove default focus
+::-moz-focus-inner  {
+    padding: 0;
+    border: 0
+}
+
+input[type="date"]::-webkit-inner-spin-button  {
+    -webkit-appearance: none;
+}
+input[type="number"] {
+    -moz-appearance:textfield;
+    &::-webkit-inner-spin-button  {
+        -webkit-appearance: none;
+    }
+}
+
+
+// =========================================================
+// Additional fixes
+// =========================================================
+
+// inherit Placeholder color
+::-webkit-input-placeholder { // WebKit, Blink, Edge
+    color: inherit !important;
+}
+:-moz-placeholder { // Mozilla Firefox 4 to 18
+    color: inherit !important;
+    opacity:  1;
+}
+::-moz-placeholder { // Mozilla Firefox 19+
+    color: inherit !important;
+    opacity:  1;
+}
+:-ms-input-placeholder { // Internet Explorer 10-11
+    color: inherit !important;
+}
+
+

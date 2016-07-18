@@ -1,0 +1,23 @@
+@page {
+    size: A4;
+    width: 210mm;
+    height: 297mm;
+    margin: 18mm 10mm 24mm;
+}
+
+@media print {
+    body {
+        padding: 0 !important;
+        background-color: transparent;
+        font-size: 10pt !important;
+        font-family: Helvetica, sans-serif !important;
+    }
+    *   {
+        color: $black !important;
+    }
+    
+    // HIDE
+    form    {
+        display: none !important;
+    }
+}

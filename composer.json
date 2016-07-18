@@ -1,0 +1,7 @@
+{
+    "require": {
+        "twig/twig": "^1.18",
+        "symfony/yaml": "^2.7",
+        "symfony/var-dumper": "^2.7"
+    }
+}

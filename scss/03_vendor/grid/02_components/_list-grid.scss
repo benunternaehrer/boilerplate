@@ -1,0 +1,135 @@
+// =============================================
+// BASICS
+// =============================================
+
+// RESET YOUR BASIC FONT-SIZE -> IS SET TO 0 TO AVOID WHITESPACE BETWEEN INLINE BLOCK ELEMENTS 
+$reset-font-size: 16px;
+$reset-letter-spacing: 1px;
+$reset-line-height: 18px;
+
+// NUMBER OF ELEMENTS PER ROW -> DON'T FORGET TO PLACE THE EMPTY LIISTS (MAX LELEMNTS MINUS 1)
+$list-elements-xs: 2;
+$list-elements-sm: 2;
+$list-elements-md: 3;
+$list-elements-lg: 4;
+$list-elements-xl: 4;
+
+// GUTTER ON EACH GRID
+$list-elements-xs-gutter: 20px;
+$list-elements-sm-gutter: 20px;
+$list-elements-md-gutter: 20px;
+$list-elements-lg-gutter: 20px;
+$list-elements-xl-gutter: 30px;
+
+
+// XS
+$list-element-width-xs: 100% / $list-elements-xs;
+$list-gutter-width-xs: $list-elements-xs-gutter / 2;
+
+// SM
+$list-element-width-sm: 100% / $list-elements-sm;
+$list-gutter-width-sm: $list-elements-sm-gutter / 2;
+
+// MD
+$list-element-width-md: 100% / $list-elements-md;
+$list-gutter-width-md: $list-elements-md-gutter / 2;
+
+// LG
+$list-element-width-lg: 100% / $list-elements-lg;
+$list-gutter-width-lg: $list-elements-lg-gutter / 2;
+
+// XL
+$list-element-width-xl: 100% / $list-elements-xl;
+$list-gutter-width-xl: $list-elements-xl-gutter / 2;
+
+// FUNCTIONS
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+
+
+
+// CSS
+
+.g-list-block    {
+    text-align: justify;
+    font-size: 0;
+    letter-spacing: 0;
+    list-style-type: none;
+    line-height: 0;
+    &:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+.g-list-block > li   {
+    display: inline-block;
+    list-style-type: none;
+    vertical-align: top;
+    font-size: $reset-font-size;
+    letter-spacing: $reset-letter-spacing;
+    line-height: $reset-line-height;
+    &:last-of-type:after {
+        content: "";
+        width: 100%;
+    }
+}
+
+
+.g-list-block > .g-list-block-fix  {
+    visibility: hidden;
+    height: 0;
+    font-size: 0 !important;
+}
+
+
+// MEDIA QUERIES DEFINING RESPONSIVE LAYOUTS
+
+@include size-xs-only {
+    .g-list-block {
+        margin: 0 (-$list-gutter-width-sm);
+    }
+    .g-list-block > li {
+        width: $list-element-width-sm;
+        padding: 0 $list-gutter-width-sm;
+    }
+}
+
+@include size-sm-up {
+    .g-list-block {
+        margin: 0 (-$list-gutter-width-sm);
+    }
+    .g-list-block > li {
+        width: $list-element-width-sm;
+        padding: 0 $list-gutter-width-sm;
+    }
+}
+@include size-md-up {
+    .g-list-block {
+        margin: 0 (-$list-gutter-width-md);
+    }
+    .g-list-block > li {
+        width: $list-element-width-md;
+        padding: 0 $list-gutter-width-md;
+    }
+}
+@include size-lg-up {
+    .g-list-block {
+        margin: 0 (-$list-gutter-width-lg);
+    }
+    .g-list-block > li {
+        width: $list-element-width-lg;
+        padding: 0 $list-gutter-width-lg;
+    }
+}
+@include size-xl-only {
+    .g-list-block {
+        margin: 0 (-$list-gutter-width-xl);
+    }
+    .g-list-block > li {
+        width: $list-element-width-xl;
+        padding: 0 $list-gutter-width-xl;
+    }
+}

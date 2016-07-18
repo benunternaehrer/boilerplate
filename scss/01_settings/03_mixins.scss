@@ -1,0 +1,29 @@
+// =========================================================
+// Z-INDEXES
+// =========================================================
+
+$zindex-positions: (
+    foo : 2,
+    bar : 3
+);
+
+@mixin z-index($z-index) {
+    z-index: map-get($zindex-positions, $z-index);
+};
+
+// USE z-index mixins
+/*
+header {
+  @include z-index('header');
+}
+*/
+
+// =========================================================
+// OTHER MIXINS
+// =========================================================
+
+@mixin clearfix {
+    content: '';
+    display: table;
+    clear: both;
+}

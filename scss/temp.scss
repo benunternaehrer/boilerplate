@@ -1,0 +1,67 @@
+//
+//  Example styling.
+//  Remove all styles when starting your project!
+//
+
+body {
+    background-color: #fafafa;
+}
+
+.l-page-wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    padding: 24px;
+}
+
+.l-nav {
+    margin-bottom: 24px;
+
+    ul {
+        li {
+            display: inline-block;
+
+            a {
+                display: inline-block;
+                padding: 6px 12px;
+                background-color: lighten(#41A7F0, 20);
+                color: white;
+                margin-right: 12px;
+
+                &:hover {
+                    background-color: #41A7F0;
+                }
+            }
+        }
+    }
+}
+
+.l-header {
+    padding: 10px;
+    color: #8E2800;
+    background-color: #FFB03B;
+    margin-bottom: 24px;
+}
+
+
+.l-footer {
+    padding: 10px;
+    background-color: #252525;
+    color: #fafafa;
+    margin-top: 24px;
+}
+
+.c-blog-entry {
+    h1 {
+        background-color: #ececec;
+        padding: 6px 12px;
+        margin-bottom: 12px;
+        font-weight: bold;
+    }
+
+    p {
+        margin-bottom: 24px;
+    }
+}

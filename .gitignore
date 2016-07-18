@@ -1,0 +1,28 @@
+#   Generate your .gitignore file at https://www.gitignore.io/
+
+#
+#   OS specific
+#   http://www.westwind.com/reference/os-x/invisibles.html
+#
+
+.DS_Store
+.Trashes
+.tmp
+
+#
+#   Dependencies
+#
+
+vendor/
+node_modules/
+
+#
+#   Gulp
+#
+
+web/css/*.css
+web/js/*.js
+data/*.json
+.sass-cache
+*.map
+js/plugins/modernizr.js
