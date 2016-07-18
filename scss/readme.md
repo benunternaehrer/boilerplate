@@ -1,7 +1,5 @@
 # Scalable and maintainable CSS
 
-**On this page you can find the concept of how we should structure CSS at Arcmedia. This concept is not finished and it will never be finished because as everything in the WWW, things can change fast. If you write CSS for Arcmedia you may find this very helpful. Or you may get in contact with a project where this concept was used. So please make sure you understand it because we want scalable and maintainable CSS on all our Projects.**
-
 ## Table of Content
 
 1. BEM
@@ -16,7 +14,7 @@
 
 The Block, Element, Modifier methodology (commonly referred to as BEM) is a popular naming convention for classes in HTML and CSS. The three BEM Elements are:
 
-##### Block:
+#### Block:
 * Each BEM Block is an independent reusable part of your UI
 * Can contain Elements and even other Blocks
 * Can contain one or more Modifiers
@@ -24,7 +22,7 @@ The Block, Element, Modifier methodology (commonly referred to as BEM) is a popu
 * Example: .article, .button
 * Naming Convention: multiple Words are separated by a dash (-)
 
-##### Element:
+#### Element:
 * Belongs to its parent Block, only has a meaning there
 * Can contain Elements and other Blocks
 * Can contain one or more Modifiers
@@ -32,7 +30,7 @@ The Block, Element, Modifier methodology (commonly referred to as BEM) is a popu
 * Example: .article\__title, .button\__icon
 * Naming Convention: an Element is separated by two underscores (\__)
 
-##### Modifier:
+#### Modifier:
 * Belongs to a Block or Element
 * Indicates a state different from the default
 * Usage: different size/form/color etc. to default
@@ -41,14 +39,14 @@ The Block, Element, Modifier methodology (commonly referred to as BEM) is a popu
 
 **Naming Convention:** We use this Naming Convention (double dash and double underscore) to avoid confusion with other classes. It also helps to visually indicate them faster. For a Block, Element or Modifier you can use a single dash, e.g .article__main-title (no CamelCase).
 
-##### The main benefits of BEM CSS are:
+#### The main benefits of BEM CSS are:
 * All Blocks are **independent** from they parent markup, so theoretically they are **reusable** (think of Buttons).
 * BEM **decouples CSS from HTML** (no style declarations on HTML elements!).
 * Single responsibility Principle: Blocks, Elements and Modifiers **focus on managing just one thing, themselves** (more about this here).
 
 Besides this BEM helps a lot to manage our project's CSS and makes it more maintainable, scalable and reusable by others.
 
-##### Important:
+#### Important:
 
 * We **don't nest** BEM Elements in CSS (like .block. block__element .block__other-element).
 * We can use the & + the Modifier Part of the whole Modifier to place them where they belong. It still compiles unnested.
@@ -58,16 +56,19 @@ Besides this BEM helps a lot to manage our project's CSS and makes it more maint
 
 Here you can see an example how we write BEM in Sass.
 
-**HTML: **
+**HTML:**
 
-	<div class="teaser">
-    	<h1 class="teaser__title teaser__title--special">Blabla</h1>
-	    <p class="teaser__content">blablabla...</p>
-    	<div class="teaser__footer">blablabla</div>
-	</div>
+```html
+    <div class="teaser">
+        <h1 class="teaser__title teaser__title--special">Blabla</h1>
+        <p class="teaser__content">blablabla...</p>
+        <div class="teaser__footer">blablabla</div>
+    </div>
+```
 
-**SCSS: **
+**SCSS:**
 
+```css
 	// Block component
 	.teaser {}
  
@@ -83,9 +84,10 @@ Here you can see an example how we write BEM in Sass.
 	// Other Elements
 	.teaser__content {}
 	.teaser__footer {}
+```
 	
 	
-##### Further Informations
+#### Further Informations
 Please read the following articles for more detailed informations:
 
 * BEM 101 on [css-tricks.com](https://css-tricks.com/bem-101/)
@@ -124,9 +126,11 @@ In this Namespace we obviously include everything what's part of the Grid. This 
 
 **Example**
 
+```css
 	.g-row  {}
 	.g-col-xs-12c   {}
 	.g-show-sm-up   {}
+```
 
 ### Layout Namespaces: l-
 
@@ -134,10 +138,12 @@ With the Layout Namespace we abstract out the repetitive, shared, and purely str
 
 **Example**
 
+```css
 	.l-white-wrapper {
     	&--no-border    {
 	    }
 	}
+```
 
 ### Typography Namespaces: t- 
 
@@ -146,12 +152,14 @@ Can be written in BEM
 
 **Example**
 
+```css
 	.t-h1   {}
 	.t-subitel {}
 	.t-copy {
 	   &--bold {
 	   }
 	}
+```
 	
 ### Component Namespaces: c- 
 
@@ -159,10 +167,12 @@ Components are normally the most common Namespace. Components are the specific p
 
 **Example**
 
+```css
 	.c-teaser   {}
 	.c-teaser__img   {}
 	.c-slider   {}
 	.c-nav-main {}
+```
 
 ### Current state Namespaces: is-, has- 
 
@@ -170,9 +180,11 @@ State Namespaces are telling us about short-lived or temporary states of the UI 
 
 **Example**
 
+```css
 	.is-active  {}
 	.is-loading {}
 	.has-dropdown   {}
+```
 
 ### JavaScript Namespaces: js-
 
@@ -180,10 +192,12 @@ With the JavaScript Namespace we can separate styling and behaviour of a block t
 
 **Example**
 
+```css
 	.js-accordion  {}
 	.js-accordion__toggler  {}
 	.js-accordion__element  {}
 	.js-apply-filter    {}
+```
 
 
 ### Utility Namespaces: u- 
@@ -193,13 +207,16 @@ Utilities are complete single responsibility rules which have a very specific an
 
 **Example**
 
+```css
 	.u-clearfix {}
 	.u-align-center {}
+```
 
 ### Example BEM + CSS-Namespaces
 
 Here is an HTML example how this all could work together. By just looking at the classes, you now have an idea what each class stands for, how they are related to each other and where you could and where you shouldn't make any changes. 
 
+```html
 	<div class="g-row">
     	<div class="g-col-xs-12c">
         	<div class="l-white-wrapper u-mb-20">
@@ -223,6 +240,7 @@ Here is an HTML example how this all could work together. By just looking at the
     	    </div>
 	    </div>
 	</div>
+```
 
 ***
 
@@ -230,13 +248,13 @@ Here is an HTML example how this all could work together. By just looking at the
 
 The idea of our Sass Architecture comes again from the CSS Mastermind Harry Roberts and is called ITCSS. ITCSS stands for Inverted Triangle CSS and it provides a specific layer for each purpose.
 
-##### The concept of ITCSS Layers is:
+#### The concept of ITCSS Layers is:
 
 * Specificity slowly increases layer-by-layer
 * We affect smaller and smaller bits of the DOM at a time.
 * Progreeively adding styles, never undoing.
 
-##### The goals of ITCSS are:
+#### The goals of ITCSS are:
 
 * Everything has a place to live.
 * People know where to look to find types of rule.
@@ -253,30 +271,30 @@ This Architecture is easily scaleable. You can remove or add parts. Please check
 Parent Foder | File/Folder name  | Description
 ---------------- | ------------- | ------------
 01_settings |  | Project Specific Settings. No Style declarations at this point.
-| 01_colors.scss | All the colors which are used in the project.
-| 02_variables.scss	| Reusable variables throughout the project.
-| 03_mixins.scss | Reusable mixins throughout the project.
+ | 01_colors.scss | All the colors which are used in the project.
+ | 02_variables.scss	| Reusable variables throughout the project.
+ | 03_mixins.scss | Reusable mixins throughout the project.
 02_reset | | Resets everything to avoid undesired styling
-| reset_basic.scss	| Basic Reset from html5doctor.
-| reset_custom.scss | Some custom resets by Arcmedia (like border-box).
-| reset_form.scss | Cuts out all the browser styles for buttons, inputs etc.
+ | reset_basic.scss	| Basic Reset from html5doctor.
+ | reset_custom.scss | Some custom resets by Arcmedia (like border-box).
+ | reset_form.scss | Cuts out all the browser styles for buttons, inputs etc.
 03_vendor | |
-| grid | Mobile first Grid (just the skeleton, no other styles).
-| … | Other 3rd partie vendor files (like CSS styles from jQuery-Plugins etc.).
+ | grid | Mobile first Grid (just the skeleton, no other styles).
+ | … | Other 3rd partie vendor files (like CSS styles from jQuery-Plugins etc.).
 04_global | | 
-| basics.scss | Contains some basic styles like link styling or the Body background-color.
-| layout.scss | Styles from the Layout Namespace.
-| print.scss | Styles for the print stylesheet, contains some default styles as a starting point.
-| typography.scss | Styles from the Typography Namespace. Contains some default mixins and functions.
+ | basics.scss | Contains some basic styles like link styling or the Body background-color.
+ | layout.scss | Styles from the Layout Namespace.
+ | print.scss | Styles for the print stylesheet, contains some default styles as a starting point.
+ | typography.scss | Styles from the Typography Namespace. Contains some default mixins and functions.
 05_components | |
-| … | One file for each Component in the Component Namespace.
+ | … | One file for each Component in the Component Namespace.
 06_utilities | |
-| utilities.scss | Styles from the Utility Namespace.
+ | utilities.scss | Styles from the Utility Namespace.
 07_overwrites | | 
-| overwrites.scss | Styles wich do not match any of the other namespaces. Try to keep this empty.
+ | overwrites.scss | Styles wich do not match any of the other namespaces. Try to keep this empty.
 / | |
-| temp.scss | Is used for temporary CSS declarations such as fixes from the developers etc. This should be reviewed and moved into the correct files/components.
-| main.scss | imports all the files from above. You need to add new files manually.
+ | temp.scss | Is used for temporary CSS declarations such as fixes from the developers etc. This should be reviewed and moved into the correct files/components.
+ | main.scss | imports all the files from above. You need to add new files manually.
 
 ***
 
