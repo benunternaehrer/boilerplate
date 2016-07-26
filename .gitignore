@@ -26,3 +26,10 @@ data/*.json
 .sass-cache
 *.map
 js/plugins/modernizr.js
+
+#
+#   Sublime
+#
+
+*.sublime-project
+*.sublime-workspace

@@ -3,10 +3,10 @@
 {% block title %}Blog{% endblock %}
 
 {% block content %}
-    <section class="l-blog">
+    <section>
         {% for b in blog %}
-            <article class="c-blog-entry">
-                <h1>{{ b.title }}</h1>
+            <article>
+                <h2>{{ b.title }}</h2>
                 <p>{{ b.body }}</p>
             </article>
         {% endfor %}

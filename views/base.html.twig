@@ -8,12 +8,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="cleartype" content="on">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+        {# Generate Favicons form http://realfavicongenerator.net #}
 
         {% block styles %}
             <!-- build:css -->
-            <link rel="stylesheet" href="css/main.min.css?9161603066">
+            <link rel="stylesheet" href="css/main.min.css?7351565886">
             <!-- endbuild -->
 
         {% endblock %}
@@ -27,22 +26,15 @@
 
         <!-- Add your site or application content here -->
         <div class="l-page-wrapper">
-            {% block nav %}
-            {% include 'partials/header.html.twig' %}
-            {% endblock %}
 
-            {% block header %}
-                <header class="l-header">
-                    Head
-                </header>
-            {% endblock %}
+            {% include 'partials/header.html.twig' %}
 
             {% block content %}
-                <p>Hello world! This is the Arcmedia Boilerplate.</p>
+                <p>No content avaiable.</p>
             {% endblock %}
 
             {% block footer %}
-                <footer class="l-footer">
+                <footer>
                     Footer
                 </footer>
             {% endblock %}
@@ -55,7 +47,7 @@
         <script>window.jQuery || document.write('<script src="js/fallback/jquery.min.js"><\/script>')</script>
         {% block javascript %}
             <!-- build:js -->
-            <script src="js/scripts.min.js?8692824328"></script>
+            <script src="js/scripts.min.js?4725804601"></script>
             <!-- endbuild -->
         {% endblock %}
 
