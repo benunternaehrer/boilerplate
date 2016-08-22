@@ -32,6 +32,22 @@ if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
 } else {
     document.body.className += "pc";
 }
-if (navigator.userAgent.match(/MSIE 9/i)) {
-    document.body.className += " ie9";
+
+// IE DETECTION
+function GetIEVersion() {
+    var sAgent = window.navigator.userAgent;
+    var Idx = sAgent.indexOf("MSIE");
+    // If IE, return version number.
+    if (Idx > 0)   {
+        return parseInt(sAgent.substring(Idx+ 5, sAgent.indexOf(".", Idx)));
+    } else if (!!navigator.userAgent.match(/Trident\/7\./)) {
+        // If IE 11 then look for Updated user agent string.
+        return 11;
+    } else {
+        return 0; //It is not IE
+    }
+}
+
+if (GetIEVersion() > 0) {
+    document.body.className += " ie" + GetIEVersion();
 }
