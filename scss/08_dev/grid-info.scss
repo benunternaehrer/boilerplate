@@ -1,0 +1,60 @@
+html    {
+    &:before, &:after {
+        font-size: 12px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        position: fixed;
+        bottom: 0;
+        z-index: 9999;
+        white-space: pre;
+    }
+
+    &:before {
+        background-color: #ff004f;
+        content: '0 – #{$grid-sm - 1} \a size-xs-only';
+        left: 50px;
+        text-align: left;
+        padding-right: 20px;
+        padding-left: 20px;
+        height: 50px;
+        @include size-sm-only {
+            background-color: #27ae60;
+            content: '#{$grid-sm} – #{$grid-md + $breakpoint-space - 1} \a size-sm-up \ size-sm-only';
+        }
+        @include size-md-only {
+            background-color: #f39c12;
+            content: '#{$grid-md + $breakpoint-space} – #{$grid-lg + $breakpoint-space - 1} \a size-md-up \ size-md-only';
+        }
+        @include size-lg-only {
+            background-color: #2980b9;
+            content: '#{$grid-lg + $breakpoint-space} – #{$grid-xl + $breakpoint-space - 1} \a size-lg-up \ size-lg-only';
+        }
+        @include size-xl-only {
+            background-color: #8e44ad;
+            content: '#{$grid-xl + $breakpoint-space} + \a size-xl-only';
+        }
+    }
+    &:after {
+        content: 'XS';
+        left: 0;
+        height: 50px;
+        width: 50px;
+        background-color: #aaaaaa;
+        text-align: center;
+        @include size-sm-only {
+            content: 'SM';
+        }
+        @include size-md-only {
+            content: 'MD';
+        }
+        @include size-lg-only {
+            content: 'LG';
+        }
+        @include size-xl-only {
+            content: 'XL';
+        }
+    }
+}
