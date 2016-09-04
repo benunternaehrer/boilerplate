@@ -34,8 +34,9 @@
     '07_overwrites/overwrites';
 
 
-@import
-    '08_dev/grid-info';
+// IMPORT DEV DEPENCENCIES
+// WILL NOT BE INCLUDED ON GULP BUILD
+@import '08_dev/dev-main';
 
 
 

@@ -12,15 +12,12 @@
         {# Generate Favicons form http://realfavicongenerator.net #}
 
         {% block styles %}
-            <!-- build:css -->
-            <link rel="stylesheet" href="css/main.css">
-            <!-- endbuild -->
-
+        <link rel="stylesheet" href="css/main.css">
         {% endblock %}
 
     </head>
     <body>
-        <!--[if lt IE 9]>
+        <!--[if lt IE 10]>
         <div class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
         <![endif]-->
         <noscript><div class="browsehappy">Please enable JavaScript for the full experience of this website!</div></noscript>
@@ -47,9 +44,7 @@
         <!--[if gt IE 9]><!--><script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script><!--<![endif]-->
         <script>window.jQuery || document.write('<script src="js/fallback/jquery.min.js"><\/script>')</script>
         {% block javascript %}
-            <!-- build:js -->
-            <script src="js/scripts.js"></script>
-            <!-- endbuild -->
+        <script src="js/scripts.js"></script>
         {% endblock %}
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

@@ -1,12 +1,11 @@
-'use strict';
-
 var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     combineMq = require('gulp-combine-mq'),
     concat = require('gulp-concat'),
-    htmlreplace = require('gulp-html-replace'),
+    replace = require('gulp-replace');
     jshint = require('gulp-jshint'),
     livereload = require('gulp-livereload'),
+    runSequence = require('run-sequence'),
     rename = require('gulp-rename'),
     sass = require('gulp-sass'),
     uglify = require('gulp-uglify'),
@@ -26,6 +25,7 @@ gulp.task('sass', function () {
 gulp.task('sassmin', ['sass'], function () {
     return gulp.src('./scss/main.scss')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(autoprefixer('last 2 version', 'ie 10'))
         .pipe(combineMq({beautify: false}))
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./web/css'));
@@ -83,73 +83,63 @@ function makeid()
 var liveReloadString = "<script>document.write('<script src=\"http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1\"></' + 'script>')</script>";
 
 gulp.task('cssJsProduction', function() {
+    gulp.src('./scss/main.scss')
+        .pipe(replace("@import '08_dev/dev-main';", "//devRemoved"))
+        .pipe(gulp.dest('./scss/'));
     gulp.src('./views/base.html.twig')
-        .pipe(htmlreplace({
-            css: {
-                src: 'css/main.min.css?' + makeid(),
-                tpl: '<link rel="stylesheet" href="%s">'
-            },
-            js: {
-                src: 'js/scripts.min.js?' + makeid(),
-                tpl: '<script src="%s"></script>'
-            },
-            liveReload: {
-                src: '',
-                tpl: '%s'
-            }
-        }, {keepBlockTags: true}))
+        .pipe(replace('css/main.css', 'css/main.min.css'))
+        .pipe(replace(/js\/scripts.(js)?(min)?(js)?(.js\?.{10})?/g, 'js/scripts.min.js?' + makeid()))
+        .pipe(replace(liveReloadString, '<!-- livereload -->'))
         .pipe(gulp.dest('./views/'));
 });
 
 gulp.task('cssJsProductionWatch', function() {
+    gulp.src('./scss/main.scss')
+        .pipe(replace("@import '08_dev/dev-main';", "//devRemoved"))
+        .pipe(gulp.dest('./scss/'));
     gulp.src('./views/base.html.twig')
-        .pipe(htmlreplace({
-            css: {
-                src: 'css/main.min.css?' + makeid(),
-                tpl: '<link rel="stylesheet" href="%s">'
-            },
-            js: {
-                src: 'js/scripts.min.js?' + makeid(),
-                tpl: '<script src="%s"></script>'
-            },
-            liveReload: {
-                src: liveReloadString,
-                tpl: '%s'
-            }
-        }, {keepBlockTags: true}))
+        .pipe(replace('css/main.css', 'css/main.min.css'))
+        .pipe(replace(/js\/scripts.(js)?(min)?(js)?(.js\?.{10})?/g, 'js/scripts.min.js?' + makeid()))
+        .pipe(replace(liveReloadString, '<!-- livereload -->'))
         .pipe(gulp.dest('./views/'));
 });
 
 gulp.task('cssJsDevelopment', function() {
+    gulp.src('./scss/main.scss')
+        .pipe(replace("//devRemoved", "@import '08_dev/dev-main';"))
+        .pipe(gulp.dest('./scss/'));
     gulp.src('./views/base.html.twig')
-        .pipe(htmlreplace({
-            css: {
-                src: 'css/main.css',
-                tpl: '<link rel="stylesheet" href="%s">'
-            },
-            js: {
-                src: 'js/scripts.js',
-                tpl: '<script src="%s"></script>'
-            },
-            liveReload: {
-                src: liveReloadString,
-                tpl: '%s'
-            }
-        }, {keepBlockTags: true}))
+        .pipe(replace('css/main.min.css', 'css/main.css'))
+        .pipe(replace(/js\/scripts.(js)?(min)?(js)?(.js\?.{10})?/g, 'js/scripts.js'))
+        .pipe(replace('<!-- livereload -->', liveReloadString))
         .pipe(gulp.dest('./views/'));
 });
 
 
 
 // TASKS
-gulp.task('default', ['sassmin', 'modernizr', 'scriptsmin', 'yaml', 'cssJsProduction'], function() {
-    notifier.notify({ title: 'Production Build', message: 'Done' });
-});
-gulp.task('build', ['sassmin', 'modernizr', 'scriptsmin', 'yaml', 'cssJsProduction'], function() {
-    notifier.notify({ title: 'Production Build', message: 'Done' });
-});
-gulp.task('dev', ['sass', 'scripts', 'yaml', 'cssJsDevelopment'], function() {
+gulp.task('default', function(callback) {
+    runSequence('cssJsDevelopment',
+              ['scripts', 'yaml'],
+              'sass',
+              callback);
     notifier.notify({ title: 'Development Build', message: 'Done' });
+});
+
+gulp.task('dev', function(callback) {
+    runSequence('cssJsDevelopment',
+              ['scripts', 'yaml'],
+              'sass',
+              callback);
+    notifier.notify({ title: 'Development Build', message: 'Done' });
+});
+
+gulp.task('build', function(callback) {
+    runSequence('cssJsProduction',
+              ['modernizr', 'scripts', 'yaml'],
+              'sassmin',
+              callback);
+    notifier.notify({ title: 'Production Build', message: 'Done' });
 });
 
 
@@ -177,10 +167,10 @@ gulp.task('watch', function() {
 gulp.task('watchbuild', function() {
 
     // Watch .scss files
-    gulp.watch('./scss/**', ['sassmin', 'cssJsProductionWatch']);
+    gulp.watch('./scss/**', ['cssJsProductionWatch', 'sassmin']);
 
     // Watch .js files
-    gulp.watch('./js/_main.js', ['scriptsmin', 'cssJsProductionWatch']);
+    gulp.watch('./js/_main.js', ['cssJsProductionWatch', 'scriptsmin']);
 
     // Watch Yaml files
     gulp.watch('./data/**', ['yaml']);
