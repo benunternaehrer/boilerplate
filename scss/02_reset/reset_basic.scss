@@ -1,7 +1,7 @@
 // Based on html5doctor.com Reset Stylesheet v1.6.1
 // Adjusted by Arcmedia
 // Last Updated: 2010-09-17
-// Author: Richard Clark - http://richclarkdesign.com 
+// Author: Richard Clark - http://richclarkdesign.com
 // Twitter: @rich_clark
 
 html, body, div, span, object, iframe,
@@ -13,7 +13,7 @@ b, i,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
+article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
     margin: 0;
@@ -25,12 +25,8 @@ time, mark, audio, video {
     background:transparent;
 }
 
-body {
-    line-height: 1;
-}
-
 article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section { 
+footer,header,hgroup,menu,nav,section {
     display:block;
 }
 
@@ -69,7 +65,7 @@ ins {
 // change colours to suit your needs
 mark {
     background-color: none;
-    color: inherit; 
+    color: inherit;
     font-weight: bold;
 }
 
@@ -91,7 +87,7 @@ table {
 hr {
     display: block;
     height: 1px;
-    border: 0;   
+    border: 0;
     border-top: 1px solid currentColor;
     margin: 0;
     padding: 0;

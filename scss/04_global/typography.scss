@@ -30,41 +30,40 @@
 // =========================================================
 
 // Define your font-sizes here
-// possibilities: 
+// possibilities:
 //     font-size, font-size-sm, font-size-md, font-size-lg, font-size-xl
 //     line-height, line-height-sm, line-height-md, line-height-lg, line-height-xl
 // Use: @include font-size(xxx)
 
-@mixin font-size( $type: basic ) {
+@mixin font-size( $type: fs-100 ) {
     $types: (
-        basic: ( 
-            font-size: 11px, 
-            font-size-sm: 12px, 
-            font-size-xl: 13px, // -> base font size
-            line-height: 135%,
-            line-height-md: 155%
-        ),
-        xs: ( 
-            font-size: 11px, 
+        fs-90: (
+            font-size: 11px,
             font-size-md: 12px,
             line-height: 120%
         ),
-        lg: ( 
-            font-size: 16px, 
+        fs-100: (
+            font-size: 12px,
+            font-size-md: 14px,
+            font-size-xl: 16px, // -> base font size
+            line-height: 140%
+        ),
+        fs-120: (
+            font-size: 16px,
             font-size-xl: 18px,
             line-height: 140%
         ),
-        xl: ( 
-            font-size: 18px, 
+        fs-140: (
+            font-size: 18px,
             font-size-xl: 22px,
             line-height: 105%,
             line-height-md: 112%
         ),
-        xxl: ( 
-            font-size: 24px, 
-            font-size-md: 28px, 
-            font-size-lg: 30px, 
-            font-size-xl: 32px, 
+        fs-160: (
+            font-size: 24px,
+            font-size-md: 28px,
+            font-size-lg: 30px,
+            font-size-xl: 32px,
             line-height: 120%,
             line-height-md: 120%,
             line-height-lg: 120%
@@ -129,8 +128,8 @@
 // Font-Settings
 // =========================================================
 
-:root     {
-    @include font-size(basic);
+html     {
+    @include font-size(fs-100);
     @include helvetica-normal;
     color: $black;
     text-align: left;
@@ -153,9 +152,15 @@ i, em   {
     font-style: italic;
 }
 
+sup, sub {
+    font-size: 60%;
+    line-height: 0;
+}
 sup {
     vertical-align: super;
-    font-size: 60%;
+}
+sub {
+    vertical-align: sub;
 }
 
 // =========================================================

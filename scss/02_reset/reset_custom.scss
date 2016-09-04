@@ -5,7 +5,7 @@
 // Fixes pseudo-element animation on :hover for Internet Explorer 10 */
 :hover{
     /* Don't stripe out this empty selector */
-} 
+}
 
 
 // =========================================================
@@ -38,3 +38,10 @@ svg:not(:root) {
 }
 
 
+// =========================================================
+// Prevent grey overlay on touchstart on iOS
+// =========================================================
+
+a, button, input {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}

@@ -16,11 +16,36 @@ img {
     vertical-align: middle;
 }
 
+// =========================================================
+// PASS MEDIAQUERIES TO JS
+// =========================================================
+
+body::after {
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -20000px;
+    left: -20000px;
+    content: '1';
+    @include size-sm-up {
+        content: '2';
+    }
+    @include size-md-up {
+        content: '3';
+    }
+    @include size-lg-up {
+        content: '4';
+    }
+    @include size-xl-only {
+        content: '5';
+    }
+}
+
 
 // =========================================================
 // NAV-BASIC
 // =========================================================
-    
+
 nav ul  {
     list-style-type: none;
     li  {

@@ -21,7 +21,7 @@
     }
 }());
 
-// Write your JS here
+// CHECK IF JS AVAILABLE
 $('html').removeClass('no-js');
 
 // SOME BROWSER/OS DETECTIONS
@@ -51,3 +51,39 @@ function GetIEVersion() {
 if (GetIEVersion() > 0) {
     document.body.className += " ie" + GetIEVersion();
 }
+
+
+//////////////////////
+// MEDIA QUERIES
+//////////////////////
+
+function mediaQuerie(){
+    var mq = window.getComputedStyle(document.querySelector('body'), ':after').getPropertyValue('content').replace(/["']/g, "");
+    mq = parseInt(mq);
+    return mq;
+}
+
+var getViewport = function() {
+    this.currentSize =  mediaQuerie();
+    this.getViewport = function (){
+        if (mediaQuerie() != this.currentSize) {
+            this.currentSize = mediaQuerie();
+            return(this.currentSize);
+        }
+    };
+};
+
+// // USAGE
+// $(window).resize(function(event) {
+//     var viewport = getViewport();
+//     if (viewport === currentSize) {
+//         if (currentSize < 4) {
+//         } else  {
+//         }
+//     }
+// });
+
+
+//////////////////////
+// CUSTOM JS
+//////////////////////
