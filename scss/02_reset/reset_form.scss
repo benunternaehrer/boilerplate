@@ -33,8 +33,12 @@ textarea    {
     &:disabled  {
         color: inherit;
     }
-
 }
+// READD WHITE-SPACE PRE (FIX FOR FIREFOX)
+textarea    {
+    white-space: pre;
+}
+
 
 // Remove the stupid outer glow in Webkit
 input:focus, button:focus   {
