@@ -14,6 +14,8 @@ error_reporting(E_ALL);
         //'cache' => 'cache'
         'debug' => true
     ]);
+    $twig->addExtension(new Twig_Extension_Debug());
+
 
     $params = Yaml::parse(file_get_contents(__DIR__.'/../data/data.yml'));
 
