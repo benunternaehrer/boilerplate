@@ -34,7 +34,7 @@ The Block, Element, Modifier methodology (commonly referred to as BEM) is a popu
 * Belongs to a Block or Element
 * Indicates a state different from the default
 * Usage: different size/form/color etc. to default
-* Example: .article__title–important, .button--large
+* Example: .article__title--important, .button--large
 * Naming Convention: a Modifier is separated by two dashes (-)
 
 **Naming Convention:** We use this Naming Convention (double dash and double underscore) to avoid confusion with other classes. It also helps to visually indicate them faster. For a Block, Element or Modifier you can use a single dash, e.g .article__main-title (no CamelCase).
@@ -208,8 +208,8 @@ Utilities are complete single responsibility rules which have a very specific an
 **Example**
 
 ```css
-	.u-clearfix {}
-	.u-align-center {}
+	.u-text-align-center {}
+	.u-visually-hidden {}
 ```
 
 ### Example BEM + CSS-Namespaces
